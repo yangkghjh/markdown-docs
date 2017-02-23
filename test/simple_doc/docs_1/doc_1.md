@@ -1,0 +1,95 @@
+#这是一个神奇的文档
+
+一个markpage.js就能搞定一切
+回车
+
+断行如何?
+
+##引用正常否?
+
+>引用是否和谐
+>>还是引用
+>>也是引用
+
+>>>也是引用
+>>>也是引用
+
+
+##支持表格
+
+| h1 | h2 | h3 |
+|:---|:---|:----|
+|今天| 过得| 如何|
+|今天| 过得| 很好|
+
+
+##还支持代码高亮
+```html
+<pre id="markpage">
+
+###神奇的文档,嵌入HTML代码,是否能正常显示
+
+</pre>
+
+```
+
+###还能支持分层导航
+  看看左边导航..
+
+##这里变化为二级菜单
+
+####插入四级菜单,上文是一个二级菜单,但跳过3级,是否也能正常显示子层? 标题名字很长很长很长很长...
+
+###再变化成3级菜单
+   每个标题级别是从上往下线性平行的
+
+#####再插入一个5级, 将是上一个3级导航的子导航. 但是导航默认只能显示4层
+   一切根据从上到下原则, 符合书写和阅读规范
+
+```
+h1
+ |
+ +- h2
+    | 
+    + - h3
+ |   
+ +- h2 
+    | 
+    + - h3
+h1
+ | 
+ +- h3
+
+```
+
+##使用mermaid生成图形
+mermaid 美人鱼, 是一个类似markdown用文本语法来描述文档图形(流程图, 时序图, 甘特图)的工具,既然markdown可以描述HTML结构的文档, 那么为何不可以描述图形? 因此有了mermaid,  您可以在文档中嵌入一段mermaid文本来生成SVG形式的图形
+比如插入下面的代码(包括div.mermaid):
+```html
+<div class="mermaid">
+sequenceDiagram
+A->> B: Query
+B->> C: Forward query
+Note right of C: Thinking...
+C->> B: Response
+B->> A: Forward response
+
+</div>
+```
+#####markpage同样会调用mermaid渲染并生成一个时序图
+<div class="mermaid">
+sequenceDiagram
+A->> B: Query
+B->> C: Forward query
+Note right of C: Thinking...
+C->> B: Response
+B->> A: Forward response
+
+</div>
+当然你最好不能定义一些mermaid关键字, 比如sequenceDiagram, end等, 书写mermaid的报错信息可以打开控制台(F12)查看看
+
+具体的图形语法可以参考 [mermaid](http://knsv.github.io/mermaid/).
+
+##试试看
+这一切只需要一个markpage.js
+
