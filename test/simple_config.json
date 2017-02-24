@@ -1,0 +1,10 @@
+{
+    "document": 
+    {
+        "path": "./simple_doc"
+    },
+    "target": 
+    {
+        "path": "../dist"
+    }
+}

@@ -1,9 +1,8 @@
 class DocRender {
-    constructor(name) { //构造函数
-          this.name = name;
+    constructor() { //构造函数
     }
-    sayName() {
-          console.log(this.name);
+    render(docs) {
+
     }
 }
 
