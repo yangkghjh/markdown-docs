@@ -1,6 +1,0 @@
-'use strict';var _doc = require('../../model/doc');
-
-test('two plus two is four', function () {
-  var doc = new _doc.Doc('../files/test.md');
-  expect(doc.test()).toBe(2);
-});
